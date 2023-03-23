@@ -1,0 +1,4 @@
+/*router-link高亮样式*/
+.active{
+    color: deeppink;
+}
