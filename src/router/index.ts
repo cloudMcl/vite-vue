@@ -1,22 +1,8 @@
 import VueRouter  from 'vue-router'
+import {autoCreateRoute} from '../utils/autoCreateRoute'
 
-const routes = [
-    {
-        path:'/',
-        name:'Home',
-        component:import('../pages/home/index.vue'),
-    },
-    {
-        path:'/About',
-        name:'About',
-        component:() => import('../pages/about/index.vue'),
-    },
-    {
-        path:'/About',
-        name:'About',
-        component:() => import('../pages/login/index.vue'),
-    }
-]
+const routes = autoCreateRoute()
+console.log("[vite] 自动生成路由:",routes)
 
 const router = new VueRouter({
     routes,

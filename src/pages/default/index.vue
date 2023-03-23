@@ -9,7 +9,7 @@
 
 <script>
 export default {
-name: "home",
+name: "default",
   computed:{
     count(){
       return this.$store.getters.getCount
