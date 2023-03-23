@@ -1,16 +1,16 @@
 <template>
-  <div id="container">
+  <div class="container">
     <div class="flex" v-if="isLogin">
       <!--      exact精确匹配路径-->
       <router-link v-for="route in routers" :to="route.path" exact>{{route.meta.title}}</router-link>
+      <router-view></router-view>
     </div>
-    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: "App",
+name: "menu",
   data() {
     return {
       routers:this.$router.options.routes
@@ -24,9 +24,8 @@ export default {
 }
 </script>
 
-<style>
-  @import "style/globleStyle.css";
-  #container{
+<style scoped>
+  .container{
     width: 100vw;
     height: 100vh;
   }
