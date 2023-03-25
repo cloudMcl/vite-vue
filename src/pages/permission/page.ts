@@ -1,4 +1,5 @@
 export default {
-    title:'权限配置',
-    menuOrder:3
+    title:'权限',
+    menuOrder:3,
+    isFold:false,
 }

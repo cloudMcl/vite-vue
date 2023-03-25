@@ -1,4 +1,5 @@
 export default {
-    title:'关于我们',
-    menuOrder:5
+    title:'说明',
+    menuOrder:5,
+    isFold:false,
 }

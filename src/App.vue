@@ -1,46 +1,37 @@
 <template>
   <div id="container">
-    <div class="flex" v-if="isLogin">
-      <!--      exact精确匹配路径-->
-      <router-link v-for="route in routers" :to="route.path" exact>{{route.meta.title}}</router-link>
+    <div class="slide-menu">
+      <slide-menu :routers="routers" :menuContainer="'height:100vh'"></slide-menu>
     </div>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import slideMenu from './components/slideMenu.vue'
 export default {
   name: "App",
+  components:{slideMenu},
   data() {
     return {
-      routers:this.$router.options.routes
+      routers:this.$router.options.routes,
     }
   },
-  computed:{
-    isLogin(){
-      return this.$route.path !== '/login'
-    }
-  }
 }
 </script>
 
 <style>
   @import "style/globleStyle.css";
   #container{
+    box-sizing: border-box;
     width: 100vw;
     height: 100vh;
+    padding: 20px 0 0 var(--slide-menu-w);
   }
-  .flex{
-    height: 50px;
+  .slide-menu{
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-  }
-  .flex a{
-    display: block;
-    margin-right: 20px;
+    left: 0;
+    top: 0;
+    z-index: 99;
   }
 </style>

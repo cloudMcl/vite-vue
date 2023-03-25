@@ -1,4 +1,5 @@
 export default {
     title:'404',
-    menuOrder:4
+    menuOrder:6,
+    isFold:false,
 }

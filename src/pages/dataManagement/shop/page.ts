@@ -1,5 +1,5 @@
 export default {
-    title:'登录',
+    title:'商家数据',
     menuOrder:2,
     isFold:false,
 }
