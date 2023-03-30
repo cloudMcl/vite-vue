@@ -46,6 +46,7 @@ export default {
     login() {
       this.$refs.loginForm.validate((valid) => {
         if (valid) {
+          window.localStorage.setItem('GET_LOGIN_INFO',JSON.stringify(true))
           this.$router.replace({path:"/"})
         } else {
           return false;
@@ -63,6 +64,7 @@ export default {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 99999;
     background-color: #324057
   }
 
